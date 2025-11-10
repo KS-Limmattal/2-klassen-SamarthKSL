@@ -1,6 +1,10 @@
 public class Fraction {
     static int numberOfFractions;
     int numerator, denominator;
+    @Override
+    public String toString() {
+        return "Fraction [numerator=" + numerator + ", denominator=" + denominator + "]";
+    }
     
     // public Fraction(Fraction f) {
     //     this(f.numerator, f.denominator);
