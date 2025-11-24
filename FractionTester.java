@@ -1,21 +1,48 @@
+
 public class FractionTester {
-    public static void main(String[] args) {
-        Fraction f = new Fraction();
-        // Der folgende Code funktioniert nur, wenn die Felder von Fraction nicht privat sind:
-        f.numerator = 12;
-        f.denominator = 0;
-        System.out.println(f.numerator + "/" + f.denominator);
+public static void main(String[] args) {
+
+        final double PI = 3.14159;
         
-        // toString():
+        // public void tryChange() {
+        //     PI = 4;
+        // }
 
-        // Encapsulation, Getter und Setter:
-
-        // Copy-Konstruktor und equals():
+        // System.out.println(tryChange);
         
-        // Klassen- und Instanzenmethoden:
+        Fraction f = new Fraction(3, 4);
+        Fraction g = new Fraction(f);  
+        Fraction n = f; 
+        Fraction h = new Fraction(6, 8); 
 
-        // statische Variablen:
+        System.out.println(f);
+        System.out.println(g);
+        System.out.println(n);
+        System.out.println(h);
+        System.out.println();
+
+        System.out.println(f == g); 
+        System.out.println(f == n); 
+        System.out.println();
+
+        System.out.println(f.equals(g)); 
+        System.out.println(f.equals(h)); 
+        System.out.println();
+
+
+        Fraction sumStatic = Fraction.add(f, h);
+        System.out.println("Statische Addition  = " + sumStatic);
+        System.out.println();
+
+
+        f.add(h);  
+        System.out.println("Dynamische Addition = " + f);
+        System.out.println();
+
+        System.out.println("Anzahl Fraction-Objekte: " + Fraction.numberOfFractions);
+        System.out.println(PI);
+    }
 
     }
 
-}
+
